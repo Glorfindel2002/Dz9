@@ -1,0 +1,33 @@
+#include <iostream>
+#include "Vector.h"
+
+int main()
+{
+	Vector<int> v;
+
+	setlocale(LC_ALL, "Russian");
+
+	std::cout << "Ââåäèòå âåêòîð v (ðàçìåðíîñòü è êîìïîíåíòû):\n";
+	std::cin >> v;
+	std::cout << '\n';
+	std::cout << "Ìîäóëü âåêòîðà v: ";
+	std::cout << v.abs() << "\n\n";
+	std::cout << "Îáðàù¸ííûé âåêòîð v:\n";
+	std::cout << -v << '\n';
+
+	int a;
+
+	std::cout << "Ââåäèòå ÷èñëî:\n";
+	std::cin >> a;
+	std::cout << "\nv * a =\n" << v * a << '\n';
+	std::cout << "Ââåäèòå âòîðîé âåêòîð u:\n";
+
+	Vector<int> u;
+
+	std::cin >> u;
+	std::cout << "v + u =\n" << v + u << '\n';
+	std::cout << "v - u =\n" << v - u << '\n';
+	std::cout << "Ñêàëÿðíîå ïðîèçâåäåíèå (v, u) = " << scalar(v, u) << '\n';
+
+	return 0;
+}
